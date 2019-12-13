@@ -1,21 +1,31 @@
-- Create Conda environment via anaconda console:
+# Readme: How to install all required packages for the successfull execution of the jupyter notebooks
 
-conda create --name env
+## Create Conda environment via anaconda console. First step open an anaconda prompt -> windows search: anaconda prompt
 
-conda activate env
+    conda create --name env
 
--Install all required packages in this environment via:
+    conda activate env
 
-pip install -r requirements.txt
+## Install all required packages in this environment via (first navigate to the directory where requirements.txt is located):
 
-- Make conda environment available as kernel in jupyter notebook
+    pip install -r requirements.txt
 
-conda install nb_conda
+## Make conda environment available as kernel in jupyter notebook
 
-- For the installation of tensorflow-gpu, remove tensorflow from the requirements and install the following conda package instead:
+    conda install nb_conda
 
-conda install tensorflow-gpu
+## To prevent errors with tqdm notebook install
 
-- For errors with tqdm notebook install
+    conda install -c conda-forge ipywidgets
 
-conda install -c conda-forge ipywidgets
+## Start the Jupyter Notebook via
+
+    jupyter notebook
+
+## Select the kernel in the jupyter notebook 
+
+Toolbar -> Kernel -> Change Kernels -> NAME_OF_ENVIRONMENT
+
+## If tensorflow-gpu is the desired version for tensorflow, remove tensorflow from the requirements.txt and install the following conda package instead:
+
+    conda install tensorflow-gpu
